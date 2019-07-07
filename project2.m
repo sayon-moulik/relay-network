@@ -1,6 +1,6 @@
-for i=1:3
-    for j=1:3
-        while true
+for i=1:100
+       for j=1:100
+        while true     
             a=randn(1);
             b=randn(1);
             c=sqrt(a^2+b^2)/2;
@@ -8,7 +8,9 @@ for i=1:3
                 break
             end 
         end
-        z(i,j)=c
+        z(i,j)=c;
     end
 end
-z
+sq=z.^2;
+hist(sq);
+histogram(sq,10)
