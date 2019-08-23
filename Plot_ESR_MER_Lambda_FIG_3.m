@@ -1,0 +1,11 @@
+clc;
+clear all;
+range_MER_dB=0:3:30;
+L=length(range_MER_dB);
+load('ESR_VS_SOP_FIG_3');
+plot(range_MER_dB,sec_cap(1:L),'-k','MarkerSize',7,'linewidth',2);
+grid on;
+xlabel('MER (dB)');
+ylabel('ESR (bps/Hz)');
+legend('k=4','location','SouthEast');
+savefig('plot_ESR_MER_fig_3.fig');
